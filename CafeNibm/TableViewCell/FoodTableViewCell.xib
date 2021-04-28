@@ -24,17 +24,44 @@
                             <constraint firstAttribute="width" constant="70" id="iRf-vm-NOQ"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Burger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDg-iT-RAA">
-                        <rect key="frame" x="120" y="23" width="76" height="29"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDg-iT-RAA">
+                        <rect key="frame" x="100" y="23" width="76" height="29"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                         <color key="textColor" systemColor="systemOrangeColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double cheese" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="899-aa-8Uw">
+                        <rect key="frame" x="117" y="62" width="78" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" systemColor="systemGrayColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="200.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3g-bZ-JPJ">
+                        <rect key="frame" x="391" y="87" width="69" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <color key="textColor" systemColor="systemOrangeColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdy-hv-Pd4">
+                        <rect key="frame" x="418" y="23" width="34" height="21"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" systemColor="systemOrangeColor"/>
+                        <color key="highlightedColor" systemColor="systemOrangeColor"/>
+                        <color key="shadowColor" systemColor="opaqueSeparatorColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="sdy-hv-Pd4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="23" id="2tz-zS-p8g"/>
+                    <constraint firstItem="899-aa-8Uw" firstAttribute="leading" secondItem="7oO-LJ-zpM" secondAttribute="trailing" constant="32" id="Exo-OZ-aC6"/>
                     <constraint firstItem="7oO-LJ-zpM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="O7A-Cl-7HR"/>
+                    <constraint firstItem="sDg-iT-RAA" firstAttribute="leading" secondItem="7oO-LJ-zpM" secondAttribute="trailing" constant="15" id="RHm-Pw-b2v"/>
+                    <constraint firstAttribute="trailing" secondItem="sdy-hv-Pd4" secondAttribute="trailing" constant="36" id="aRA-BI-lJM"/>
+                    <constraint firstItem="t3g-bZ-JPJ" firstAttribute="top" secondItem="sdy-hv-Pd4" secondAttribute="bottom" constant="43" id="qwP-bQ-f4H"/>
                     <constraint firstItem="7oO-LJ-zpM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="ryj-BB-Vv3"/>
+                    <constraint firstItem="899-aa-8Uw" firstAttribute="top" secondItem="sDg-iT-RAA" secondAttribute="bottom" constant="10" id="s6U-0k-0Lh"/>
+                    <constraint firstItem="sDg-iT-RAA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="23" id="s7g-Zt-GGN"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -43,6 +70,15 @@
     </objects>
     <resources>
         <image name="cheese-burger" width="170.5" height="170.5"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
