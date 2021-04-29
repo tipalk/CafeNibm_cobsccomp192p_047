@@ -85,7 +85,14 @@ class SignUpViewController: UIViewController {
                 Loaf("Signup data not saved ",state:.error,sender:self).show()
                 return
             }
-            Loaf("Signup data  saved ",state:.success,sender:self).show()
+            
+                                            
+            Loaf("Signup data  saved ",state:.success,sender:self).show{
+                type in
+                self.dismiss(animated: true, completion: nil)
+            }
+            
+             
         }
     }
     

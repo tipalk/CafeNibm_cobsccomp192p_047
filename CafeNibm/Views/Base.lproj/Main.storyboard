@@ -3,12 +3,13 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sign In View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SignInViewController" customModule="CafeNibm" customModuleProvider="target" sceneMemberID="viewController">
@@ -131,11 +132,12 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WhV-Ql-LTd" secondAttribute="trailing" constant="30" id="yYj-PK-Pqc"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="L4Q-0y-OOG"/>
                     <connections>
                         <outlet property="onsignin" destination="QNB-SI-cVg" id="WmE-4E-EyN"/>
                         <outlet property="txtemail" destination="tDS-6r-wnd" id="sve-qm-2ok"/>
                         <outlet property="txtpassword" destination="0gG-UT-8TJ" id="A3o-I9-Jb8"/>
-                        <segue destination="mLD-8u-as9" kind="presentation" identifier="SignInTohome" modalPresentationStyle="fullScreen" id="45u-bV-0Sg"/>
+                        <segue destination="aFu-hl-J3N" kind="presentation" identifier="SignInTohome" id="0dS-nb-APB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -337,9 +339,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WpU-C1-ODp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30" y="848"/>
+            <point key="canvasLocation" x="950" y="889"/>
         </scene>
-        <!--Food List View Controller-->
+        <!--Food-->
         <scene sceneID="gh0-XX-ieY">
             <objects>
                 <viewController id="mLD-8u-as9" customClass="FoodListViewController" customModule="CafeNibm" customModuleProvider="target" sceneMemberID="viewController">
@@ -354,7 +356,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="127" estimatedRowHeight="127" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RQp-Ed-9Mo">
-                                <rect key="frame" x="20" y="70" width="335" height="577"/>
+                                <rect key="frame" x="20" y="70" width="335" height="528"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="mLD-8u-as9" id="ol5-tL-Eg6"/>
@@ -374,22 +376,104 @@
                             <constraint firstItem="wZz-rN-T3G" firstAttribute="bottom" secondItem="RQp-Ed-9Mo" secondAttribute="bottom" constant="20" id="yZb-pZ-HYr"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Food" image="dish-2" id="9j2-qR-FCH"/>
                     <connections>
                         <outlet property="tblfood" destination="RQp-Ed-9Mo" id="HlO-yA-sVZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9rO-xk-mCh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="839" y="78"/>
+            <point key="canvasLocation" x="-826" y="1657"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="y9F-u7-pzK">
+            <objects>
+                <viewController id="HQq-m4-UFl" customClass="ProfileViewController" customModule="CafeNibm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ptr-lO-Ha4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7K-zP-qMG">
+                                <rect key="frame" x="20" y="548" width="335" height="40"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="r0N-N8-KLA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="Signout:" destination="HQq-m4-UFl" eventType="touchUpInside" id="TRb-i8-KxI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tM9-Oz-83d"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E7K-zP-qMG" firstAttribute="leading" secondItem="tM9-Oz-83d" secondAttribute="leading" constant="20" id="1yd-ff-53M"/>
+                            <constraint firstItem="tM9-Oz-83d" firstAttribute="bottom" secondItem="E7K-zP-qMG" secondAttribute="bottom" constant="30" id="HuY-k9-06b"/>
+                            <constraint firstItem="tM9-Oz-83d" firstAttribute="trailing" secondItem="E7K-zP-qMG" secondAttribute="trailing" constant="20" id="Tj7-8a-uZ8"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="user" id="Gjv-dE-4SF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L84-fG-VnW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="71" y="1657"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yWA-fB-M92">
+            <objects>
+                <tabBarController modalPresentationStyle="fullScreen" id="aFu-hl-J3N" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dyZ-xj-aY2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="mLD-8u-as9" kind="relationship" relationship="viewControllers" id="p6c-vc-mn4"/>
+                        <segue destination="Nfd-NO-GOb" kind="relationship" relationship="viewControllers" id="Dey-lI-xHK"/>
+                        <segue destination="HQq-m4-UFl" kind="relationship" relationship="viewControllers" id="3Fo-iB-xYw"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jUe-eR-bR5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-825" y="853"/>
+        </scene>
+        <!--Order-->
+        <scene sceneID="YiV-lH-5og">
+            <objects>
+                <viewController id="Nfd-NO-GOb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="blw-ES-Zi0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lE9-pc-4xS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Order" image="order-2" id="Mpq-dk-C37"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="58B-01-mxe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1790" y="1633"/>
         </scene>
     </scenes>
     <resources>
         <image name="diet" width="170.5" height="170.5"/>
+        <image name="dish-2" width="32" height="32"/>
+        <image name="order-2" width="32" height="32"/>
+        <image name="user" width="32" height="32"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -15,9 +15,11 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var txtpassword: UITextField!
     @IBOutlet weak var onsignin: UIButton!
     
+    var ref: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        ref = Database.database().reference()
         // Do any additional setup after loading the view.
     }
     
@@ -47,7 +49,41 @@ class SignInViewController: UIViewController {
                 return
             }
             
-            self.performSegue(withIdentifier: "SignInTohome", sender: nil)
+            if let email = authResult?.user.email{
+                self.getUserData(email: email)
+            }
+            else{
+                Loaf("User not found ",state:.error,sender:self).show()
+            }
+            
+            
         }
     }
+    
+    func getUserData(email :String){
+        ref.child("users").child(email
+                        .replacingOccurrences(of: "@", with: "_")
+                        .replacingOccurrences(of: ".", with: "_")).observe(.value, with: {
+            (snapshot) in
+                if snapshot.hasChildren(){
+                    if let data = snapshot.value{
+                        if let userdata = data as? [String :Any]{
+                            let user = User(
+                                Username: userdata["userName"] as! String,
+                                Useremail: userdata["userEmail"] as! String,
+                                Userpassword:userdata["userPassword"] as! String,
+                                Phonenumber:userdata["userPhone"] as! String)
+                            
+                            let sessionManager = Session()
+                            sessionManager.saveuserlogin(user: user)
+                            self.performSegue(withIdentifier: "SignInTohome", sender: nil)
+                        }
+                    }
+                }
+                else{
+                    Loaf("User not found",state:.error,sender:self).show()
+                    }
+            } )
+    }
 }
+

@@ -16,6 +16,17 @@ class Session {
     func saveuserlogin(user:User)
     {
         UserDefaults.standard.setValue(true, forKey: "Logged_in")
+        UserDefaults.standard.setValue(user.Username, forKey: "User_name")
+        UserDefaults.standard.setValue(user.Useremail, forKey: "User_mail")
+        UserDefaults.standard.setValue(user.Phonenumber, forKey: "User_phone")
+    }
+    func getUserData()->User{
+        let user =
+            User(Username: UserDefaults.standard.string(forKey: "User_name") ??  "",
+                Useremail: UserDefaults.standard.string(forKey: "User_mail") ?? "",
+                Userpassword: ""  ,
+                Phonenumber:UserDefaults.standard.string(forKey: "User_phone") ?? "" )
+        return user
     }
     
     func clearuserlogin() {

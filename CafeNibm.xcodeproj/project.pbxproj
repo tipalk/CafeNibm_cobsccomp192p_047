@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		790788A1263B5B2000AECB6A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790788A0263B5B2000AECB6A /* ProfileViewController.swift */; };
 		790FE7842621827F0022B4E2 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790FE7832621827F0022B4E2 /* SignInViewController.swift */; };
 		7921B5832621874C003DF4AC /* EntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7921B5822621874C003DF4AC /* EntityModel.swift */; };
 		7921B5882621AD55003DF4AC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7921B5872621AD55003DF4AC /* SignUpViewController.swift */; };
@@ -52,6 +53,7 @@
 		2B3BD2FF8FA3D18474ED8525 /* Pods_CafeNibmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafeNibmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		578E04A9D6121A330EB38074 /* Pods-CafeNibmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeNibmTests.release.xcconfig"; path = "Target Support Files/Pods-CafeNibmTests/Pods-CafeNibmTests.release.xcconfig"; sourceTree = "<group>"; };
 		756FEC1A6D8252A5D26FBBD4 /* Pods-CafeNibm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeNibm.debug.xcconfig"; path = "Target Support Files/Pods-CafeNibm/Pods-CafeNibm.debug.xcconfig"; sourceTree = "<group>"; };
+		790788A0263B5B2000AECB6A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		790FE7832621827F0022B4E2 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		7921B5822621874C003DF4AC /* EntityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityModel.swift; sourceTree = "<group>"; };
 		7921B5872621AD55003DF4AC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				790FE7832621827F0022B4E2 /* SignInViewController.swift */,
 				7921B5872621AD55003DF4AC /* SignUpViewController.swift */,
 				7921B5952621B825003DF4AC /* FoodListViewController.swift */,
+				790788A0263B5B2000AECB6A /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 			files = (
 				790FE7842621827F0022B4E2 /* SignInViewController.swift in Sources */,
 				7921B5962621B825003DF4AC /* FoodListViewController.swift in Sources */,
+				790788A1263B5B2000AECB6A /* ProfileViewController.swift in Sources */,
 				79919FF5261855BC006E18C3 /* AppDelegate.swift in Sources */,
 				7921B58E2621AFB4003DF4AC /* Session.swift in Sources */,
 				7968A846263AEEE90026AE3B /* InputValidator.swift in Sources */,
