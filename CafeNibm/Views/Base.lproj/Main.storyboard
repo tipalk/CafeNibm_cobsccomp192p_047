@@ -135,6 +135,7 @@
                         <outlet property="onsignin" destination="QNB-SI-cVg" id="WmE-4E-EyN"/>
                         <outlet property="txtemail" destination="tDS-6r-wnd" id="sve-qm-2ok"/>
                         <outlet property="txtpassword" destination="0gG-UT-8TJ" id="A3o-I9-Jb8"/>
+                        <segue destination="mLD-8u-as9" kind="presentation" identifier="SignInTohome" modalPresentationStyle="fullScreen" id="45u-bV-0Sg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -336,7 +337,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WpU-C1-ODp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="693.60000000000002" y="77.811094452773617"/>
+            <point key="canvasLocation" x="30" y="848"/>
         </scene>
         <!--Food List View Controller-->
         <scene sceneID="gh0-XX-ieY">
@@ -352,7 +353,7 @@
                                 <color key="textColor" systemColor="linkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RQp-Ed-9Mo">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="127" estimatedRowHeight="127" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RQp-Ed-9Mo">
                                 <rect key="frame" x="20" y="70" width="335" height="577"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
@@ -379,7 +380,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9rO-xk-mCh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1365.5999999999999" y="77.811094452773617"/>
+            <point key="canvasLocation" x="839" y="78"/>
         </scene>
     </scenes>
     <resources>
