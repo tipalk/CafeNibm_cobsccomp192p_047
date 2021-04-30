@@ -12,6 +12,9 @@
 		790788AB263BC38400AECB6A /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790788AA263BC38400AECB6A /* FoodViewController.swift */; };
 		790788B0263BCDD800AECB6A /* CartHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790788AF263BCDD800AECB6A /* CartHandler.swift */; };
 		790788CB263BD2D500AECB6A /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790788CA263BD2D500AECB6A /* CartViewController.swift */; };
+		790788D0263BE34800AECB6A /* orderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790788CF263BE34800AECB6A /* orderViewController.swift */; };
+		790788D7263BE43200AECB6A /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790788D5263BE43200AECB6A /* OrderTableViewCell.swift */; };
+		790788D8263BE43200AECB6A /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 790788D6263BE43200AECB6A /* OrderTableViewCell.xib */; };
 		790FE7842621827F0022B4E2 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790FE7832621827F0022B4E2 /* SignInViewController.swift */; };
 		7921B5832621874C003DF4AC /* EntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7921B5822621874C003DF4AC /* EntityModel.swift */; };
 		7921B5882621AD55003DF4AC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7921B5872621AD55003DF4AC /* SignUpViewController.swift */; };
@@ -62,6 +65,9 @@
 		790788AA263BC38400AECB6A /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		790788AF263BCDD800AECB6A /* CartHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartHandler.swift; sourceTree = "<group>"; };
 		790788CA263BD2D500AECB6A /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		790788CF263BE34800AECB6A /* orderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderViewController.swift; sourceTree = "<group>"; };
+		790788D5263BE43200AECB6A /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		790788D6263BE43200AECB6A /* OrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
 		790FE7832621827F0022B4E2 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		7921B5822621874C003DF4AC /* EntityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityModel.swift; sourceTree = "<group>"; };
 		7921B5872621AD55003DF4AC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +143,7 @@
 				790788A5263B615100AECB6A /* LaunchViewController.swift */,
 				790788AA263BC38400AECB6A /* FoodViewController.swift */,
 				790788CA263BD2D500AECB6A /* CartViewController.swift */,
+				790788CF263BE34800AECB6A /* orderViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -172,6 +179,8 @@
 			children = (
 				7976A07E26392A870001A2FC /* FoodTableViewCell.swift */,
 				7976A07F26392A870001A2FC /* FoodTableViewCell.xib */,
+				790788D5263BE43200AECB6A /* OrderTableViewCell.swift */,
+				790788D6263BE43200AECB6A /* OrderTableViewCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -355,6 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				790788D8263BE43200AECB6A /* OrderTableViewCell.xib in Resources */,
 				7991A001261855BD006E18C3 /* LaunchScreen.storyboard in Resources */,
 				797653622622E8B600E91656 /* GoogleService-Info.plist in Resources */,
 				7976A08126392A870001A2FC /* FoodTableViewCell.xib in Resources */,
@@ -489,11 +499,13 @@
 			files = (
 				790FE7842621827F0022B4E2 /* SignInViewController.swift in Sources */,
 				7921B5962621B825003DF4AC /* FoodListViewController.swift in Sources */,
+				790788D7263BE43200AECB6A /* OrderTableViewCell.swift in Sources */,
 				790788CB263BD2D500AECB6A /* CartViewController.swift in Sources */,
 				790788A1263B5B2000AECB6A /* ProfileViewController.swift in Sources */,
 				79919FF5261855BC006E18C3 /* AppDelegate.swift in Sources */,
 				790788B0263BCDD800AECB6A /* CartHandler.swift in Sources */,
 				7921B58E2621AFB4003DF4AC /* Session.swift in Sources */,
+				790788D0263BE34800AECB6A /* orderViewController.swift in Sources */,
 				7968A846263AEEE90026AE3B /* InputValidator.swift in Sources */,
 				7921B5832621874C003DF4AC /* EntityModel.swift in Sources */,
 				7976A08026392A870001A2FC /* FoodTableViewCell.swift in Sources */,

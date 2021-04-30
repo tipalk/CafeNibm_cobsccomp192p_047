@@ -678,14 +678,41 @@
         <!--Order-->
         <scene sceneID="YiV-lH-5og">
             <objects>
-                <viewController id="Nfd-NO-GOb" sceneMemberID="viewController">
+                <viewController id="Nfd-NO-GOb" customClass="orderViewController" customModule="CafeNibm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="blw-ES-Zi0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEb-qJ-cpc">
+                                <rect key="frame" x="33" y="33" width="53.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" systemColor="linkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="28L-p4-ets">
+                                <rect key="frame" x="33" y="81" width="310" height="495"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Nfd-NO-GOb" id="SB1-Lw-KQZ"/>
+                                    <outlet property="delegate" destination="Nfd-NO-GOb" id="G4j-8q-c1b"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="lE9-pc-4xS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lE9-pc-4xS" firstAttribute="bottom" secondItem="28L-p4-ets" secondAttribute="bottom" constant="42" id="2Yo-bk-EbU"/>
+                            <constraint firstItem="28L-p4-ets" firstAttribute="leading" secondItem="lE9-pc-4xS" secondAttribute="leading" constant="33" id="4tI-IL-rKg"/>
+                            <constraint firstItem="HEb-qJ-cpc" firstAttribute="leading" secondItem="lE9-pc-4xS" secondAttribute="leading" constant="33" id="E0D-zz-v8e"/>
+                            <constraint firstItem="lE9-pc-4xS" firstAttribute="trailing" secondItem="28L-p4-ets" secondAttribute="trailing" constant="32" id="FkF-j5-sgh"/>
+                            <constraint firstItem="HEb-qJ-cpc" firstAttribute="top" secondItem="lE9-pc-4xS" secondAttribute="top" constant="33" id="ad4-uU-U5a"/>
+                            <constraint firstItem="28L-p4-ets" firstAttribute="top" secondItem="HEb-qJ-cpc" secondAttribute="bottom" constant="28.5" id="pgx-Ru-aXr"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Order" image="order-2" id="Mpq-dk-C37"/>
+                    <connections>
+                        <outlet property="tblorders" destination="28L-p4-ets" id="A17-54-fTX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="58B-01-mxe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

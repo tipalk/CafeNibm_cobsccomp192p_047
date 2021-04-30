@@ -23,3 +23,9 @@ struct FoodItem {
     var catergory : String
     var image : String
 }
+struct Order {
+    var orderId:String = ""
+    var orderStatus : String = ""
+    var orderTotal : Double = 0
+    
+}
