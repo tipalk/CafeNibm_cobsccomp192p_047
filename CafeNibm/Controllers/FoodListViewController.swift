@@ -14,6 +14,7 @@ class FoodListViewController: UIViewController{
     @IBOutlet weak var tblfood: UITableView!
     
     var fooditems : [FoodItem] = []
+    var selectitem :  FoodItem?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,14 @@ class FoodListViewController: UIViewController{
         
         ref = Database.database().reference()
         getItemData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "foodtoview"{
+            let destinationVC = segue.destination as! FoodViewController
+            destinationVC.foodItem = selectitem
+        }
+        
     }
 }
 
@@ -59,6 +68,10 @@ extension FoodListViewController : UITableViewDelegate,UITableViewDataSource{
         cell.setUpView(fooditem: fooditems[indexPath.row])
         return cell
         
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectitem = fooditems[indexPath.row]
+        self.performSegue(withIdentifier: "foodtoview", sender: nil)
     }
     
 }
